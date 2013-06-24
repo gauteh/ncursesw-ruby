@@ -844,7 +844,7 @@ static int rbncurshelper_nonblocking_wgetch(WINDOW *c_win) {
 #endif
     finishtime = starttime + delay;
 #ifdef NCURSES_VERSION
-#ifdef ON_FREEBSD
+#ifndef ON_FREEBSD
     c_win->_delay = 0;
 #endif
 #endif
