@@ -153,6 +153,15 @@ if have_func("clock_gettime")
   $CFLAGS += " -DHAVE_CLOCK_GETTIME"
 end
 
+# check if we are on FreeBSD
+print "checking whether we are on FreeBSD..."
+if RUBY_PLATFORM =~ /freebsd/
+  puts "yes"
+  $CFLAGS += " -DON_FREEBSD"
+else
+  puts "no"
+end
+
 $CXXFLAGS  = $CFLAGS
 
 create_makefile('ncursesw_bin')

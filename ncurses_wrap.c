@@ -844,7 +844,9 @@ static int rbncurshelper_nonblocking_wgetch(WINDOW *c_win) {
 #endif
     finishtime = starttime + delay;
 #ifdef NCURSES_VERSION
+#ifdef ON_FREEBSD
     c_win->_delay = 0;
+#endif
 #endif
     while (doupdate() /* detects resize */, (result = wgetch(c_win)) == ERR) {
 #ifdef HAVE_RB_THREAD_FD_SELECT
