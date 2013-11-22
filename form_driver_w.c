@@ -62,12 +62,12 @@
 |                    E_UNKNOWN_COMMAND - command not known
 +--------------------------------------------------------------------------*/
 NCURSES_EXPORT(int)
-form_driver(FORM *form, int status, int c)
+form_driver_w(FORM *form, int status, int c)
 {
   const Binding_Info *BI = (Binding_Info *) 0;
   int res = E_UNKNOWN_COMMAND;
 
-  T((T_CALLED("form_driver(%p,%d, %d)"), (void *)form, status, c));
+  T((T_CALLED("form_driver_w(%p,%d, %d)"), (void *)form, status, c));
 
   if (!form)
     RETURN(E_BAD_ARGUMENT);
