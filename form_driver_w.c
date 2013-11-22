@@ -31,10 +31,13 @@
  *   Changes: Pawel Wilk, 2013                                              *
  ****************************************************************************/
  
-#if defined(HAVE_FORM_DRIVER_W_H) || defined(HAVE_NCURSESW_FORM_DRIVER_W_H)
-
 #include "form_driver_w.h"
 #include "compat.h"
+
+#if defined(HAVE_FORM_H) || defined(HAVE_NCURSESW_FORM_H)
+
+# include <form.h>
+# include <wctype.h>
 
 /*---------------------------------------------------------------------------
 |   Facility      :  libnform
@@ -212,4 +215,4 @@ form_driver_w(FORM *form, int status, int c)
   RETURN(res);
 }
 
-#endif
+# endif
