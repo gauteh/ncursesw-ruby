@@ -159,6 +159,7 @@ if RUBY_PLATFORM =~ /freebsd/
 else
   # add NCURSES_OPAQUE for mac
   $CFLAGS += " -DNCURSES_OPAQUE=0"
+  $CFLAGS += " -DTRY_MULTIBYTE=1"
 end
 
 if have_func("clock_gettime")
