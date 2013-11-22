@@ -36,6 +36,8 @@ spec = Gem::Specification.new do |s|
     "examples/read_line.rb",
     "examples/test_scanw.rb",
     "extconf.rb",
+    "form_driver_w.c",
+    "form_driver_w.h",
     "form_wrap.c",
     "form_wrap.h",
     "make_dist.rb",
