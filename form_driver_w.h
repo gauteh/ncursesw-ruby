@@ -41,6 +41,6 @@
 #endif
 
 NCURSES_EXPORT(int)
-form_driver(FORM *, int, int);
+form_driver_w(FORM *, int, int);
 
 #endif
