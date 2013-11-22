@@ -51,7 +51,7 @@ begin
     case (ret[0])
     when Ncurses::OK
       # If this is a normal character, it gets Printed
-      Ncurses::Form.form_driver(form, [ch].pack("U").ord)
+      Ncurses::Form.form_driver_w(form, [ch].pack("U").ord)
       fields[0].set_field_buffer(0, [ch].pack("U"))
       Ncurses.mvprintw(9, 10, "Type: OK           ")
     when Ncurses::KEY_CODE_YES
